@@ -1,7 +1,8 @@
 # Template file for 'libtd'
 pkgname=libtd
-version=1.8.0
-revision=2
+commit=efc6bd553b61dea0ae8c0436695e8d2539bf03f9
+version="1.8.27"
+revision=1
 build_style=cmake
 build_helper=qemu
 hostmakedepends="gperf"
@@ -10,8 +11,8 @@ short_desc="Cross-platform library for building Telegram clients"
 maintainer="Orphaned <orphan@voidlinux.org>"
 license="BSL-1.0"
 homepage="https://core.telegram.org/tdlib"
-distfiles="https://github.com/tdlib/td/archive/v${version}.tar.gz"
-checksum=30d560205fe82fb811cd57a8fcbc7ac853a5b6195e9cb9e6ff142f5e2d8be217
+distfiles="https://github.com/tdlib/td/archive/${commit}.tar.gz"
+checksum=ecdcbe6ee442248b621ce5b2f2481a55177bf937a18e757bb04e788d8fc3def8
 
 if [ "$XBPS_TARGET_ENDIAN" = "be" ]; then
 	broken="Unsupported tl-schema version -1"
