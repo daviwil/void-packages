@@ -1,0 +1,19 @@
+# Template file for 'font-iosevka-aile'
+pkgname=font-iosevka-aile
+version=28.0.7
+revision=1
+depends="font-util"
+short_desc="Slender monospace sans-serif and slab-serif typeface"
+maintainer="Jose G Perez Taveras <josegpt27@gmail.com>"
+license="OFL-1.1"
+homepage="https://typeof.net/Iosevka/"
+changelog="https://raw.githubusercontent.com/be5invis/Iosevka/master/CHANGELOG.md"
+distfiles="https://github.com/be5invis/Iosevka/releases/download/v${version}/SuperTTC-IosevkaAile-${version}.zip"
+checksum="b0a33f60971309596111bab9b047a6b60a8f8055493f93cc469f88cfe25c98ea"
+
+font_dirs="/usr/share/fonts/TTF"
+
+do_install() {
+	vmkdir usr/share/fonts/TTF
+	vcopy *.ttc usr/share/fonts/TTF
+}
