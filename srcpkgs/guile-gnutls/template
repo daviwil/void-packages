@@ -1,0 +1,18 @@
+# Template file for 'guile-gnutls'
+pkgname=guile-gnutls
+version=3.7.14
+revision=1
+wrksrc="guile-gnutls-${version}"
+build_style=gnu-configure
+hostmakedepends="automake libtool guile3 gnutls pkg-config"
+makedepends="guile3 guile3-devel gnutls gnutls-devel"
+short_desc="Functional package manager for installed software packages and versions"
+maintainer="David Wilson <david@daviwil.com>"
+license="GPL-3.0-or-later, LGPL-3.0-or-later"
+homepage="https://guix.gnu.org"
+distfiles="https://gitlab.com/gnutls/guile/-/archive/v$version/guile-v$version.tar.gz"
+checksum=c1560095d5d867a6428328cc65adc07583b497cbfc1a0b98a796ee277c00566e
+
+pre_configure() {
+	autoreconf -vfi
+}

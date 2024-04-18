@@ -1,0 +1,16 @@
+# Template file for 'guix'
+pkgname=guix
+version=1.4.0
+revision=1
+wrksrc="guile-${version}"
+build_style=gnu-configure
+hostmakedepends="guile3 pkg-config texinfo"
+_guile_libs="gnutls"
+makedepends="guile3 guile3-devel gnutls-devel $_guile_libs"
+depends="guile3 $_guile_libs"
+short_desc="Functional package manager for installed software packages and versions"
+maintainer="David Wilson <david@daviwil.com>"
+license="GPL-3.0-or-later, LGPL-3.0-or-later"
+homepage="https://guix.gnu.org"
+distfiles="${GNU_SITE}/guix/guix-${version}.tar.gz"
+checksum=43c769cbf632ef05449ac1fa48c1ba152c33494c6abc7e47137bba7b2149f8a4
